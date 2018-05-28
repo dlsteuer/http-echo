@@ -26,7 +26,9 @@ func handler(rw http.ResponseWriter, req *http.Request) {
 		s = append(s, "\n"+body)
 	}
 
-	fmt.Fprint(rw, strings.Join(s, "\n"))
+	msg := strings.Join(s, "\n")
+	fmt.Fprint(rw, msg)
+	fmt.Println(msg)
 }
 
 func main() {
